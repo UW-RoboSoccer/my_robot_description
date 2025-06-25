@@ -94,7 +94,7 @@
     <collision>
       <origin xyz="1.09705e-06 -0.0701498 0.0183268" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/knee_housing_collision.stl"/>
+        <mesh filename="package://assets\merged\knee_housing_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -109,7 +109,7 @@
     <visual>
       <origin xyz="1.38778e-17 -0.0420709 0.0188591" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/knee_ankle_rotor_case_visual.stl"/>
+        <mesh filename="package://assets\merged\knee_ankle_rotor_case_visual.stl"/>
       </geometry>
       <material name="knee_ankle_rotor_case_parts_material">
         <color rgba="0.231373 0.380392 0.705882 1.0"/>
@@ -118,7 +118,7 @@
     <collision>
       <origin xyz="1.38778e-17 -0.0420709 0.0188591" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/knee_ankle_rotor_case_collision.stl"/>
+        <mesh filename="package://assets\merged\knee_ankle_rotor_case_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -133,7 +133,7 @@
     <visual>
       <origin xyz="0.0154245 -0.0123715 -0.0184091" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_visual.stl"/>
+        <mesh filename="package://assets\merged\sts3250_visual.stl"/>
       </geometry>
       <material name="sts3250_parts_material">
         <color rgba="0.396357 0.456175 0.399432 1.0"/>
@@ -142,7 +142,7 @@
     <collision>
       <origin xyz="0.0154245 -0.0123715 -0.0184091" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_collision.stl"/>
+        <mesh filename="package://assets\merged\sts3250_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -157,7 +157,7 @@
     <visual>
       <origin xyz="5.58176e-09 0.0197347 -0.0475044" rpy="1.5708 2.32206e-80 2.06626e-48"/>
       <geometry>
-        <mesh filename="package://assets/merged/foot_visual.stl"/>
+        <mesh filename="package://assets\merged\foot_visual.stl"/>
       </geometry>
       <material name="foot_parts_material">
         <color rgba="0.65098 0.486275 0.0196078 1.0"/>
@@ -166,7 +166,7 @@
     <collision>
       <origin xyz="5.58176e-09 0.0197347 -0.0475044" rpy="1.5708 2.32206e-80 2.06626e-48"/>
       <geometry>
-        <mesh filename="package://assets/merged/foot_collision.stl"/>
+        <mesh filename="package://assets\merged\foot_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -229,7 +229,7 @@
     <visual>
       <origin xyz="3.24372e-11 -0.000458903 -0.0137673" rpy="-1.33983e-29 -1.22465e-16 3.14159"/>
       <geometry>
-        <mesh filename="package://assets/merged/yaw_adapter_2_visual.stl"/>
+        <mesh filename="package://assets\merged\yaw_adapter_2_visual.stl"/>
       </geometry>
       <material name="yaw_adapter_2_parts_material">
         <color rgba="0.0862745 0.317647 0.690196 1.0"/>
@@ -238,7 +238,7 @@
     <collision>
       <origin xyz="3.24372e-11 -0.000458903 -0.0137673" rpy="-1.33983e-29 -1.22465e-16 3.14159"/>
       <geometry>
-        <mesh filename="package://assets/merged/yaw_adapter_2_collision.stl"/>
+        <mesh filename="package://assets\merged\yaw_adapter_2_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -253,7 +253,7 @@
     <visual>
       <origin xyz="-0.000322808 -0.0137311 0.00416399" rpy="-1.5708 -1.14008e-28 1.22465e-16"/>
       <geometry>
-        <mesh filename="package://assets/merged/bearing_visual.stl"/>
+        <mesh filename="package://assets\merged\bearing_visual.stl"/>
       </geometry>
       <material name="bearing_parts_material">
         <color rgba="0.391406 0.460207 0.389068 1.0"/>
@@ -262,7 +262,7 @@
     <collision>
       <origin xyz="-0.000322808 -0.0137311 0.00416399" rpy="-1.5708 -1.14008e-28 1.22465e-16"/>
       <geometry>
-        <mesh filename="package://assets/merged/bearing_collision.stl"/>
+        <mesh filename="package://assets\merged\bearing_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -277,7 +277,7 @@
     <visual>
       <origin xyz="1.09705e-06 0.0701498 0.0193232" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_2_visual.stl"/>
+        <mesh filename="package://assets\merged\sts3250_2_visual.stl"/>
       </geometry>
       <material name="sts3250_2_parts_material">
         <color rgba="0.347706 0.466239 0.293669 1.0"/>
@@ -286,7 +286,7 @@
     <collision>
       <origin xyz="1.09705e-06 0.0701498 0.0193232" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_2_collision.stl"/>
+        <mesh filename="package://assets\merged\sts3250_2_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -301,7 +301,7 @@
     <visual>
       <origin xyz="1.38778e-17 0.0420709 0.0187909" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/knee_ankle_rotor_case_2_visual.stl"/>
+        <mesh filename="package://assets\merged\knee_ankle_rotor_case_2_visual.stl"/>
       </geometry>
       <material name="knee_ankle_rotor_case_2_parts_material">
         <color rgba="0.231373 0.380392 0.705882 1.0"/>
@@ -310,7 +310,7 @@
     <collision>
       <origin xyz="1.38778e-17 0.0420709 0.0187909" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/knee_ankle_rotor_case_2_collision.stl"/>
+        <mesh filename="package://assets\merged\knee_ankle_rotor_case_2_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -325,7 +325,7 @@
     <visual>
       <origin xyz="0.0154245 0.0123715 -0.0192409" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_3_visual.stl"/>
+        <mesh filename="package://assets\merged\sts3250_3_visual.stl"/>
       </geometry>
       <material name="sts3250_3_parts_material">
         <color rgba="0.396357 0.456175 0.399432 1.0"/>
@@ -334,7 +334,7 @@
     <collision>
       <origin xyz="0.0154245 0.0123715 -0.0192409" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_3_collision.stl"/>
+        <mesh filename="package://assets\merged\sts3250_3_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -349,7 +349,7 @@
     <visual>
       <origin xyz="5.58176e-09 0.0197347 -0.0475044" rpy="1.5708 4.64413e-80 4.13252e-48"/>
       <geometry>
-        <mesh filename="package://assets/merged/foot_2_visual.stl"/>
+        <mesh filename="package://assets\merged\foot_2_visual.stl"/>
       </geometry>
       <material name="foot_2_parts_material">
         <color rgba="0.65098 0.486275 0.0196078 1.0"/>
@@ -358,7 +358,7 @@
     <collision>
       <origin xyz="5.58176e-09 0.0197347 -0.0475044" rpy="1.5708 4.64413e-80 4.13252e-48"/>
       <geometry>
-        <mesh filename="package://assets/merged/foot_2_collision.stl"/>
+        <mesh filename="package://assets\merged\foot_2_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -421,7 +421,7 @@
     <visual>
       <origin xyz="-0.000405734 0.00767679 -0.0212962" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/shoulder_rightangle_visual.stl"/>
+        <mesh filename="package://assets\merged\shoulder_rightangle_visual.stl"/>
       </geometry>
       <material name="shoulder_rightangle_parts_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -430,7 +430,7 @@
     <collision>
       <origin xyz="-0.000405734 0.00767679 -0.0212962" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/shoulder_rightangle_collision.stl"/>
+        <mesh filename="package://assets\merged\shoulder_rightangle_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -445,7 +445,7 @@
     <visual>
       <origin xyz="-0.000137418 -0.0333694 -0.0209277" rpy="-1.5708 6.12323e-17 2.47818e-16"/>
       <geometry>
-        <mesh filename="package://assets/merged/bicep_visual.stl"/>
+        <mesh filename="package://assets\merged\bicep_visual.stl"/>
       </geometry>
       <material name="bicep_parts_material">
         <color rgba="0.457862 0.518983 0.499247 1.0"/>
@@ -454,7 +454,7 @@
     <collision>
       <origin xyz="-0.000137418 -0.0333694 -0.0209277" rpy="-1.5708 6.12323e-17 2.47818e-16"/>
       <geometry>
-        <mesh filename="package://assets/merged/bicep_collision.stl"/>
+        <mesh filename="package://assets\merged\bicep_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -469,7 +469,7 @@
     <visual>
       <origin xyz="0.0026095 -0.0296011 -0.0182997" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/forearm_visual.stl"/>
+        <mesh filename="package://assets\merged\forearm_visual.stl"/>
       </geometry>
       <material name="forearm_parts_material">
         <color rgba="0.439862 0.517822 0.503377 1.0"/>
@@ -478,7 +478,7 @@
     <collision>
       <origin xyz="0.0026095 -0.0296011 -0.0182997" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/forearm_collision.stl"/>
+        <mesh filename="package://assets\merged\forearm_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -517,7 +517,7 @@
     <visual>
       <origin xyz="0.000405734 -0.00767679 -0.0212962" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/shoulder_rightangle_2_visual.stl"/>
+        <mesh filename="package://assets\merged\shoulder_rightangle_2_visual.stl"/>
       </geometry>
       <material name="shoulder_rightangle_2_parts_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -526,7 +526,7 @@
     <collision>
       <origin xyz="0.000405734 -0.00767679 -0.0212962" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/shoulder_rightangle_2_collision.stl"/>
+        <mesh filename="package://assets\merged\shoulder_rightangle_2_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -541,7 +541,7 @@
     <visual>
       <origin xyz="-0.000139766 0.0333694 -0.0209277" rpy="-1.5708 -6.12323e-17 3.14159"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_4_visual.stl"/>
+        <mesh filename="package://assets\merged\sts3250_4_visual.stl"/>
       </geometry>
       <material name="sts3250_4_parts_material">
         <color rgba="0.457862 0.518983 0.499247 1.0"/>
@@ -550,7 +550,7 @@
     <collision>
       <origin xyz="-0.000139766 0.0333694 -0.0209277" rpy="-1.5708 -6.12323e-17 3.14159"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_4_collision.stl"/>
+        <mesh filename="package://assets\merged\sts3250_4_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -565,7 +565,7 @@
     <visual>
       <origin xyz="-0.00260696 -0.0296011 -0.0182997" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_5_visual.stl"/>
+        <mesh filename="package://assets\merged\sts3250_5_visual.stl"/>
       </geometry>
       <material name="sts3250_5_parts_material">
         <color rgba="0.439862 0.517822 0.503377 1.0"/>
@@ -574,7 +574,7 @@
     <collision>
       <origin xyz="-0.00260696 -0.0296011 -0.0182997" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_5_collision.stl"/>
+        <mesh filename="package://assets\merged\sts3250_5_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -613,7 +613,7 @@
     <visual>
       <origin xyz="0.00146817 -0.00929036 -0.0151995" rpy="3.14159 9.17574e-66 3.74628e-50"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_6_visual.stl"/>
+        <mesh filename="package://assets\merged\sts3250_6_visual.stl"/>
       </geometry>
       <material name="sts3250_6_parts_material">
         <color rgba="0.386349 0.417291 0.372244 1.0"/>
@@ -622,7 +622,7 @@
     <collision>
       <origin xyz="0.00146817 -0.00929036 -0.0151995" rpy="3.14159 9.17574e-66 3.74628e-50"/>
       <geometry>
-        <mesh filename="package://assets/merged/sts3250_6_collision.stl"/>
+        <mesh filename="package://assets\merged\sts3250_6_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -913,3 +913,5 @@
   </joint>
 
 </ros2_control>
+
+</robot>

@@ -8,39 +8,39 @@ controller_manager:
     position_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-    imu_sensor_broadcaster:
-      type: imu_sensor_broadcaster/IMUSensorBroadcaster
+    # imu_sensor_broadcaster:
+    #   type: imu_sensor_broadcaster/IMUSensorBroadcaster
 
-    torso_test_fts_broadcaster:
-      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+    # torso_test_fts_broadcaster:
+    #   type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
 
-    force_torque_sensor_broadcaster:
-      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+    # right_fts_broadcaster:
+    #   type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
 
-    left_fts_broadcaster:
-      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+    # left_fts_broadcaster:
+    #   type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
 
 position_controller:
   ros__parameters:
     joints:
-      - right_shoulder_pitch
-      - right_shoulder_roll
       - right_elbow
-      - left_shoulder_pitch
-      - left_shoulder_roll
+      - right_shoulder_roll
+      - right_shoulder_pitch
       - left_elbow
-      - head_yaw
+      - left_shoulder_roll
+      - left_shoulder_pitch
       - head_pitch
-      - right_hip_pitch
-      - right_hip_roll
-      - right_hip_yaw
-      - right_knee
+      - head_yaw
       - right_ankle_pitch
-      - left_hip_pitch
-      - left_hip_roll
-      - left_hip_yaw
-      - left_knee
+      - right_knee
+      - right_hip_yaw
+      - right_hip_roll
+      - right_hip_pitch
       - left_ankle_pitch
+      - left_knee
+      - left_hip_yaw
+      - left_hip_roll
+      - left_hip_pitch
     command_interfaces:
       - position
     state_interfaces:
@@ -57,12 +57,12 @@ torso_test_fts_broadcaster:
     sensor_name: "torso_test_fts"
     frame_id: "torso_test"
 
-force_torque_sensor_broadcaster:
+right_fts_broadcaster:
   ros__parameters:
-    sensor_name: "right_foot_sole_fts" # Back to original right foot sensor
-    frame_id: "feet_sole"             # Must match the 'frame_id' in URDF <sensor> tag's param
+    sensor_name: "right_foot_sole_fts"
+    frame_id: "right_foot_sole"
 
 left_fts_broadcaster:
   ros__parameters:
-    sensor_name: "left_foot_sole_fts"   # Must match the 'name' in URDF <sensor> tag
-    frame_id: "feet_2_sole"             # Must match the 'frame_id' in URDF <sensor> tag's param
+    sensor_name: "left_foot_sole_fts"
+    frame_id: "left_foot_sole"

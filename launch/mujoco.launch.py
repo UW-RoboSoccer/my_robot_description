@@ -5,13 +5,16 @@ from launch_ros.actions import Node
 from launch.actions import ExecuteProcess
 
 def generate_launch_description():
-    pkg_path = get_package_share_directory('my_robot_description')
+    pkg_path = "/home/ernestwang31/ros2_ws/install/my_robot_description/share/my_robot_description"
     urdf_file = os.path.join(pkg_path, 'urdf', 'robot.urdf')
     mjcf_file = os.path.join(pkg_path, 'mjcf', 'robot.xml')
     controller_yaml = os.path.join(pkg_path, 'config', 'controllers.yaml')
 
     with open(urdf_file, 'r') as f:
         robot_description = {'robot_description': f.read()}
+        print("==== ROBOT DESCRIPTION ====")
+        print(robot_description['robot_description'][:500])  # first 500 chars
+
 
     return LaunchDescription([
         Node(
