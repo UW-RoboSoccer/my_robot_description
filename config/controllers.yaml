@@ -8,17 +8,17 @@ controller_manager:
     position_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-    # imu_sensor_broadcaster:
-    #   type: imu_sensor_broadcaster/IMUSensorBroadcaster
+    imu_sensor_broadcaster:
+      type: imu_sensor_broadcaster/IMUSensorBroadcaster
 
-    # torso_test_fts_broadcaster:
-    #   type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+    torso_test_fts_broadcaster:
+      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
 
-    # right_fts_broadcaster:
-    #   type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+    right_fts_broadcaster:
+      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
 
-    # left_fts_broadcaster:
-    #   type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
+    left_fts_broadcaster:
+      type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster
 
 position_controller:
   ros__parameters:

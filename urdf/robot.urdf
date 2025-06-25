@@ -1,6 +1,4 @@
 <?xml version="1.0" ?>
-<!-- Generated using onshape-to-robot -->
-<!-- Onshape https://cad.onshape.com/documents/edea034631796554fe7de906/w/0725cd49d9878c86b643a14d/e/ef4419f73ceb4e549626bf9b -->
 <robot name="humanoid_robot">
   <!-- Link torso -->
   <link name="torso">
@@ -85,11 +83,8 @@
     <visual>
       <origin xyz="1.09705e-06 -0.0701498 0.0183268" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://my_robot_description/v1_meshes/knee_housing.stl"/>
+        <mesh filename="package://assets/merged/knee_housing_collision.stl"/>
       </geometry>
-      <material name="knee_housing_parts_material">
-        <color rgba="0.347706 0.466239 0.293669 1.0"/>
-      </material>
     </visual>
     <collision>
       <origin xyz="1.09705e-06 -0.0701498 0.0183268" rpy="-1.5708 -1.5708 0"/>
@@ -107,7 +102,7 @@
     </inertial>
     <!-- Part knee_ankle_rotor_case_parts -->
     <visual>
-      <origin xyz="1.38778e-17 -0.0420709 0.0188591" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="1.38778e-17 -0.0420709 0.0188591" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/merged/knee_ankle_rotor_case_visual.stl"/>
       </geometry>
@@ -116,7 +111,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 -0.0420709 0.0188591" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="1.38778e-17 -0.0420709 0.0188591" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/merged/knee_ankle_rotor_case_collision.stl"/>
       </geometry>
@@ -722,194 +717,4 @@
   <child link="left_foot_sole"/>
 </joint>
 
-<ros2_control name="MujocoSystem" type="system">
-  <hardware>
-    <plugin>mujoco_ros2_control/MujocoSystem</plugin>
-    <param name="mjcf_file_path">$(find my_robot_description)/v1_mjcf/robot.xml</param>
-  </hardware>
-
-  <sensor name="torso_imu">
-    <state_interface name="orientation.x"/>
-    <state_interface name="orientation.y"/>
-    <state_interface name="orientation.z"/>
-    <state_interface name="orientation.w"/>
-    <state_interface name="angular_velocity.x"/>
-    <state_interface name="angular_velocity.y"/>
-    <state_interface name="angular_velocity.z"/>
-    <state_interface name="linear_acceleration.x"/>
-    <state_interface name="linear_acceleration.y"/>
-    <state_interface name="linear_acceleration.z"/>
-    <param name="frame_id">torso_imu</param>
-  </sensor>
-
-  <sensor name="torso_test_fts">
-      <state_interface name="force.x"/>
-      <state_interface name="force.y"/>
-      <state_interface name="force.z"/>
-      <state_interface name="torque.x"/>
-      <state_interface name="torque.y"/>
-      <state_interface name="torque.z"/>
-      <param name="frame_id">torso_test</param>
-  </sensor>
-
-  <sensor name="right_foot_sole_fts">
-      <state_interface name="force.x"/>
-      <state_interface name="force.y"/>
-      <state_interface name="force.z"/>
-      <state_interface name="torque.x"/>
-      <state_interface name="torque.y"/>
-      <state_interface name="torque.z"/>
-      <param name="frame_id">right_foot_sole</param>
-  </sensor>
-
-  <sensor name="left_foot_sole_fts">
-      <state_interface name="force.x"/>
-      <state_interface name="force.y"/>
-      <state_interface name="force.z"/>
-      <state_interface name="torque.x"/>
-      <state_interface name="torque.y"/>
-      <state_interface name="torque.z"/>
-      <param name="frame_id">left_foot_sole</param>
-    </sensor>
-
-  <joint name="right_elbow">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_shoulder_roll">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_shoulder_pitch">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_elbow">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_shoulder_roll">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_shoulder_pitch">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="head_pitch">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="head_yaw">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_ankle_pitch">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_ankle_roll">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_knee">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_hip_yaw">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_hip_roll">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="right_hip_pitch">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_ankle_pitch">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_ankle_roll">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_knee">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_hip_yaw">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_hip_roll">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-  <joint name="left_hip_pitch">
-    <command_interface name="position"/>
-    <state_interface name="position"/>
-    <state_interface name="velocity"/>
-    <state_interface name="effort"/>
-  </joint>
-
-</ros2_control>
+</robot>

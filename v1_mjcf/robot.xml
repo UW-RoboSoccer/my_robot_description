@@ -1,23 +1,24 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/edea034631796554fe7de906/w/0725cd49d9878c86b643a14d/e/ef4419f73ceb4e549626bf9b -->
-<mujoco model="C:\Users\David\desktop\v1_mujoco">
-  <compiler angle="radian" meshdir="." autolimits="true"/>
+<mujoco>
+  <compiler angle="radian" meshdir="../v1_meshes" autolimits="true"/>
   <default>
-    <default class="C:\Users\David\desktop\v1_mujoco">
-      <joint frictionloss="0.1" armature="0.005"/>
-      <position kp="50" dampratio="1"/>
-      <default class="visual">
-        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
-      </default>
-      <default class="collision">
-        <geom group="3"/>
-      </default>
+    <joint frictionloss="0.1" armature="0.005"/>
+    <position kp="50" dampratio="1"/>
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+    </default>
+    <default class="collision">
+      <geom group="3"/>
     </default>
   </default>
   <worldbody>
+    <!-- Ground plane -->
+    <geom name="ground" type="plane" size="0 0 1" pos="0 0 0" quat="1 0 0 0" material="ground_material"/>
+    
     <!-- Link torso -->
-    <body name="torso" pos="0 0 0" quat="1 0 0 0" childclass="C:\Users\David\desktop\v1_mujoco">
+    <body name="torso" pos="0 0 0" quat="1 0 0 0">
       <freejoint name="torso_freejoint"/>
       <inertial pos="-2.59269e-07 0.0654878 -0.0078332" mass="1.25968" fullinertia="0.00401254 0.00450993 0.00269862 -3.98569e-09 -1.83499e-08 0.000396725"/>
       <!-- Part torso_parts -->
@@ -215,48 +216,48 @@
     </body>
   </worldbody>
   <asset>
-    <mesh name="foot_2_visual" file="foot.stl"/>
-    <mesh name="knee_ankle_rotor_case_visual" file="knee_ankle_rotor_case.stl"/>
-    <mesh name="knee_housing_visual" file="knee_housing.stl"/>
-    <mesh name="sts3250_6_visual" file="sts3250__6.stl"/>
-    <mesh name="yaw_adapter_visual" file="yaw_adapter.stl"/>
-    <mesh name="camera_enclosure_collision" file="camera_enclosure_back.stl"/>
-    <mesh name="foot_visual" file="foot.stl"/>
-    <mesh name="bearing_visual" file="bearing.stl"/>
-    <mesh name="sts3250_4_visual" file="sts3250__4.stl"/>
-    <mesh name="sts3250_3_visual" file="sts3250__3.stl"/>
-    <mesh name="torso_collision" file="top_motor_housing.stl"/>
-    <mesh name="yaw_adapter_collision" file="yaw_adapter.stl"/>
-    <mesh name="foot_collision" file="foot.stl"/>
-    <mesh name="shoulder_rightangle_visual" file="shoulder_rightangle.stl"/>
-    <mesh name="camera_enclosure_visual" file="camera_enclosure_front.stl"/>
-    <mesh name="sts3250_4_collision" file="sts3250__4.stl"/>
-    <mesh name="sts3250_collision" file="sts3250.stl"/>
-    <mesh name="sts3250_visual" file="sts3250.stl"/>
-    <mesh name="sts3250_3_collision" file="sts3250__3.stl"/>
-    <mesh name="bearing_collision" file="bearing.stl"/>
-    <mesh name="shoulder_rightangle_collision" file="shoulder_rightangle.stl"/>
-    <mesh name="yaw_adapter_2_collision" file="yaw_adapter.stl"/>
-    <mesh name="bicep_collision" file="bicep.stl"/>
-    <mesh name="shoulder_rightangle_2_visual" file="shoulder_rightangle.stl"/>
-    <mesh name="forearm_visual" file="forearm.stl"/>
-    <mesh name="pitch_roll_housing_collision" file="pitch_roll_housing.stl"/>
-    <mesh name="sts3250_6_collision" file="sts3250__6.stl"/>
-    <mesh name="sts3250_5_visual" file="sts3250__5.stl"/>
-    <mesh name="pitch_roll_housing_visual" file="pitch_roll_housing.stl"/>
-    <mesh name="forearm_collision" file="forearm.stl"/>
-    <mesh name="knee_housing_collision" file="knee_housing.stl"/>
-    <mesh name="knee_ankle_rotor_case_2_collision" file="knee_ankle_rotor_case.stl"/>
-    <mesh name="sts3250_2_collision" file="sts3250__2.stl"/>
-    <mesh name="sts3250_2_visual" file="sts3250__2.stl"/>
-    <mesh name="knee_ankle_rotor_case_2_visual" file="knee_ankle_rotor_case.stl"/>
-    <mesh name="knee_ankle_rotor_case_collision" file="knee_ankle_rotor_case.stl"/>
-    <mesh name="yaw_adapter_2_visual" file="yaw_adapter.stl"/>
-    <mesh name="foot_2_collision" file="foot.stl"/>
-    <mesh name="sts3250_5_collision" file="sts3250__5.stl"/>
-    <mesh name="torso_visual" file="top_motor_housing.stl"/>
-    <mesh name="bicep_visual" file="bicep.stl"/>
-    <mesh name="shoulder_rightangle_2_collision" file="shoulder_rightangle.stl"/>
+    <mesh name="foot_2_visual" file="foot_2_visual.stl"/>
+    <mesh name="knee_ankle_rotor_case_visual" file="knee_ankle_rotor_case_visual.stl"/>
+    <mesh name="knee_housing_visual" file="knee_housing_visual.stl"/>
+    <mesh name="sts3250_6_visual" file="sts3250_6_visual.stl"/>
+    <mesh name="yaw_adapter_visual" file="yaw_adapter_visual.stl"/>
+    <mesh name="camera_enclosure_collision" file="camera_enclosure_collision.stl"/>
+    <mesh name="foot_visual" file="foot_visual.stl"/>
+    <mesh name="bearing_visual" file="bearing_visual.stl"/>
+    <mesh name="sts3250_4_visual" file="sts3250_4_visual.stl"/>
+    <mesh name="sts3250_3_visual" file="sts3250_3_visual.stl"/>
+    <mesh name="torso_collision" file="torso_collision.stl"/>
+    <mesh name="yaw_adapter_collision" file="yaw_adapter_collision.stl"/>
+    <mesh name="foot_collision" file="foot_collision.stl"/>
+    <mesh name="shoulder_rightangle_visual" file="shoulder_rightangle_visual.stl"/>
+    <mesh name="camera_enclosure_visual" file="camera_enclosure_visual.stl"/>
+    <mesh name="sts3250_4_collision" file="sts3250_4_collision.stl"/>
+    <mesh name="sts3250_collision" file="sts3250_collision.stl"/>
+    <mesh name="sts3250_visual" file="sts3250_visual.stl"/>
+    <mesh name="sts3250_3_collision" file="sts3250_3_collision.stl"/>
+    <mesh name="bearing_collision" file="bearing_collision.stl"/>
+    <mesh name="shoulder_rightangle_collision" file="shoulder_rightangle_collision.stl"/>
+    <mesh name="yaw_adapter_2_collision" file="yaw_adapter_2_collision.stl"/>
+    <mesh name="bicep_collision" file="bicep_collision.stl"/>
+    <mesh name="shoulder_rightangle_2_visual" file="shoulder_rightangle_2_visual.stl"/>
+    <mesh name="forearm_visual" file="forearm_visual.stl"/>
+    <mesh name="pitch_roll_housing_collision" file="pitch_roll_housing_collision.stl"/>
+    <mesh name="sts3250_6_collision" file="sts3250_6_collision.stl"/>
+    <mesh name="sts3250_5_visual" file="sts3250_5_visual.stl"/>
+    <mesh name="pitch_roll_housing_visual" file="pitch_roll_housing_visual.stl"/>
+    <mesh name="forearm_collision" file="forearm_collision.stl"/>
+    <mesh name="knee_housing_collision" file="knee_housing_collision.stl"/>
+    <mesh name="knee_ankle_rotor_case_2_collision" file="knee_ankle_rotor_case_2_collision.stl"/>
+    <mesh name="sts3250_2_collision" file="sts3250_2_collision.stl"/>
+    <mesh name="sts3250_5_collision" file="sts3250_5_collision.stl"/>
+    <mesh name="bicep_visual" file="bicep_visual.stl"/>
+    <mesh name="sts3250_2_visual" file="sts3250_2_visual.stl"/>
+    <mesh name="torso_visual" file="torso_visual.stl"/>
+    <mesh name="knee_ankle_rotor_case_collision" file="knee_ankle_rotor_case_collision.stl"/>
+    <mesh name="yaw_adapter_2_visual" file="yaw_adapter_2_visual.stl"/>
+    <mesh name="foot_2_collision" file="foot_2_collision.stl"/>
+    <mesh name="knee_ankle_rotor_case_2_visual" file="knee_ankle_rotor_case_2_visual.stl"/>
+    <mesh name="shoulder_rightangle_2_collision" file="shoulder_rightangle_2_collision.stl"/>
     <material name="torso_visual_material" rgba="0.505757 0.672338 0.668928 1"/>
     <material name="torso_collision_material" rgba="0.505757 0.672338 0.668928 1"/>
     <material name="yaw_adapter_visual_material" rgba="0.0862745 0.317647 0.690196 1"/>
@@ -299,28 +300,29 @@
     <material name="sts3250_6_collision_material" rgba="0.386349 0.417291 0.372244 1"/>
     <material name="camera_enclosure_visual_material" rgba="0.623322 0.771679 0.860693 1"/>
     <material name="camera_enclosure_collision_material" rgba="0.623322 0.771679 0.860693 1"/>
+    <material name="ground_material" rgba="0.8 0.8 0.8 1"/>
   </asset>
   <actuator>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_hip_yaw" joint="right_hip_yaw"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_hip_roll" joint="right_hip_roll"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_hip_pitch" joint="right_hip_pitch"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_knee" joint="right_knee"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_ankle_pitch" joint="right_ankle_pitch"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_ankle_roll" joint="right_ankle_roll"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_hip_yaw" joint="left_hip_yaw"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_hip_roll" joint="left_hip_roll"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_hip_pitch" joint="left_hip_pitch"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_knee" joint="left_knee"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_ankle_pitch" joint="left_ankle_pitch"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_ankle_roll" joint="left_ankle_roll"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_shoulder_pitch" joint="left_shoulder_pitch"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_shoulder_roll" joint="left_shoulder_roll"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="left_elbow" joint="left_elbow"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_shoulder_pitch" joint="right_shoulder_pitch"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_shoulder_roll" joint="right_shoulder_roll"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="right_elbow" joint="right_elbow"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="head_yaw" joint="head_yaw"/>
-    <position class="C:\Users\David\desktop\v1_mujoco" name="head_pitch" joint="head_pitch"/>
+    <position name="right_hip_yaw" joint="right_hip_yaw"/>
+    <position name="right_hip_roll" joint="right_hip_roll"/>
+    <position name="right_hip_pitch" joint="right_hip_pitch"/>
+    <position name="right_knee" joint="right_knee"/>
+    <position name="right_ankle_pitch" joint="right_ankle_pitch"/>
+    <position name="right_ankle_roll" joint="right_ankle_roll"/>
+    <position name="left_hip_yaw" joint="left_hip_yaw"/>
+    <position name="left_hip_roll" joint="left_hip_roll"/>
+    <position name="left_hip_pitch" joint="left_hip_pitch"/>
+    <position name="left_knee" joint="left_knee"/>
+    <position name="left_ankle_pitch" joint="left_ankle_pitch"/>
+    <position name="left_ankle_roll" joint="left_ankle_roll"/>
+    <position name="left_shoulder_pitch" joint="left_shoulder_pitch"/>
+    <position name="left_shoulder_roll" joint="left_shoulder_roll"/>
+    <position name="left_elbow" joint="left_elbow"/>
+    <position name="right_shoulder_pitch" joint="right_shoulder_pitch"/>
+    <position name="right_shoulder_roll" joint="right_shoulder_roll"/>
+    <position name="right_elbow" joint="right_elbow"/>
+    <position name="head_yaw" joint="head_yaw"/>
+    <position name="head_pitch" joint="head_pitch"/>
   </actuator>
 
   <sensor>
