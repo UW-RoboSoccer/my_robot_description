@@ -8,3 +8,16 @@ mujoco.launch.py:
 URDF → XACRO Processing → Robot Description → MuJoCo Engine
                                                     ↓
 Controllers ← ROS 2 Control ← MuJoCo ROS 2 Control ← Physics Simulation
+TSID Controller Node
+    ↓ (publishes joint commands)
+/robosoccer/joint_commands (Float64MultiArray)
+    ↓
+TSID to Trajectory Bridge
+    ↓ (converts to trajectory)
+/position_controller/joint_trajectory (JointTrajectory)
+    ↓
+ros2_control Position Controller
+    ↓ (sends to hardware interface)
+mujoco_ros2_control (MujocoSystem)
+    ↓ (applies to simulation)
+MuJoCo Physics Engine
